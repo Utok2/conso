@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos — RappelConso Alertes</title>
+  <style>
+    body { font-family: -apple-system, Arial, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
+    header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+    img.icon { width: 48px; height: 48px; }
+    nav { margin: 24px 0; padding: 12px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+    nav a { margin-right: 16px; color: #E63946; text-decoration: none; font-weight: 600; }
+    nav a:hover { text-decoration: underline; }
+    a { color: #E63946; }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="icon" src="app_icon.png" alt="Logo RappelConso Alertes">
+    <h1>À propos</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="privacy.html">Politique de confidentialité</a>
+    <a href="terms.html">Conditions d'utilisation</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h2>Notre mission</h2>
+  <p>
+    Chaque semaine, des dizaines de produits alimentaires font l'objet d'un
+    rappel officiel en France pour des raisons sanitaires (contamination,
+    présence de corps étrangers, erreur d'étiquetage allergènes, etc.).
+    Ces informations, bien que publiques, restent souvent peu visibles du
+    grand public.
+  </p>
+  <p>
+    RappelConso Alertes a pour objectif de rendre cette information plus
+    accessible en la diffusant sous un format court et rapide à consulter,
+    directement sur TikTok, en se concentrant sur les catégories de produits
+    les plus couramment consommés par les foyers français.
+  </p>
+
+  <h2>Comment ça fonctionne</h2>
+  <p>
+    Le service interroge régulièrement l'API publique de données ouvertes
+    de l'État français (<a href="https://data.economie.gouv.fr/" target="_blank" rel="noopener">data.economie.gouv.fr</a>,
+    jeu de données RappelConso) et génère automatiquement une courte vidéo
+    de synthèse pour chaque nouveau rappel concernant l'une de ces
+    catégories : œufs et produits à base d'œufs, plats préparés et snacks,
+    eaux, lait et produits laitiers.
+  </p>
+
+  <h2>Source des données</h2>
+  <p>
+    Toutes les informations relayées proviennent de
+    <a href="https://rappel.conso.gouv.fr/" target="_blank" rel="noopener">RappelConso</a>,
+    publiées par la DGCCRF sous
+    <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence/" target="_blank" rel="noopener">Licence Ouverte / Open Licence</a>.
+    Ce projet n'est ni développé, ni géré, ni approuvé par la DGCCRF ou
+    l'État français.
+  </p>
+</body>
+</html>
