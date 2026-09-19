@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirection TikTok...</title>
+    <script>
+        // L'URL de ton tunnel Ngrok actuel
+        const ngrokUrl = "https://cider-postnasal-daytime.ngrok-free.dev";
+        
+        // On récupère les paramètres de l'URL envoyés par TikTok (?code=...&scopes=...)
+        const queryParams = window.location.search;
+        
+        // On redirige instantanément vers ton backend Node.js sur WSL
+        window.location.href = ngrokUrl + "/api/tiktok/callback" + queryParams;
+    </script>
+</head>
+<body>
+    <p>Authentification réussie, redirection vers l'application...</p>
+</body>
+</html>
