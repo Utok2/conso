@@ -16,7 +16,7 @@
   </div>
 
   <script>
-    const NGROK_URL = "https://cider-postnasal-daytime.ngrok-free.dev";
+    const API_URL = "https://api-vigitok.belatic.com";
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
     const state = params.get('state');
@@ -24,12 +24,9 @@
     if (!code || !state) {
       document.getElementById('message').innerText = "❌ Code de validation ou état manquant.";
     } else {
-      // Appel API en arrière-plan avec l'en-tête anti-avertissement ngrok
-      fetch(`${NGROK_URL}/api/tiktok/callback?code=${encodeURIComponent(code)}&state=${encodeURIComponent(state)}`, {
-        method: 'GET',
-        headers: {
-          'ngrok-skip-browser-warning': 'true'
-        }
+      // Appel API en arrière-plan vers ton sous-domaine Cloudflare permanent
+      fetch(`${API_URL}/api/tiktok/callback?code=${encodeURIComponent(code)}&state=${encodeURIComponent(state)}`, {
+        method: 'GET'
       })
       .then(response => {
         if (response.ok) {
