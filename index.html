@@ -1,60 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Allovigitok Alertes</title>
-  <meta name="description" content="Relais automatisé des alertes de rappel de produits alimentaires publiées par RappelConso (DGCCRF / data.gouv.fr).">
-  <style>
-    body { font-family: -apple-system, Arial, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
-    header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
-    img.icon { width: 64px; height: 64px; }
-    nav { margin: 24px 0; padding: 12px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
-    nav a { margin-right: 16px; color: #E63946; text-decoration: none; font-weight: 600; }
-    nav a:hover { text-decoration: underline; }
-    footer { margin-top: 40px; font-size: 0.85em; color: #777; }
-    a { color: #E63946; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Allovigitok Alertes</title>
+<meta name="description" content="Relais automatisé des alertes de rappel de produits alimentaires publiées par RappelConso (DGCCRF / data.gouv.fr).">
+<link rel="icon" href="app_icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&amp;family=Inter:wght@400;500&amp;family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img class="icon" src="app_icon.png" alt="Logo RappelConso Alertes">
-    <h1>Allovigitok Alertes</h1>
-  </header>
+<header class="site-header"><div class="wrap bar">
+  <a class="brand" href="index.html"><img src="app_icon.png" alt="" width="32" height="32">Allovigitok Alertes</a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Navigation principale"><ul>
+    <li><a href="index.html" aria-current="page">Accueil</a></li>
+    <li><a href="about.html">À propos</a></li>
+    <li><a href="privacy.html">Confidentialité</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></nav>
+</div></header>
 
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="about.html">À propos</a>
-    <a href="privacy.html">Politique de confidentialité</a>
-    <a href="terms.html">Conditions d'utilisation</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<main>
+<section class="hero">
+  <canvas id="planet" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <h1>Les alertes de rappel de produits, en temps réel.</h1>
+    <p class="lead">Nous relayons automatiquement les alertes de rappel de produits alimentaires publiées par RappelConso, directement sur TikTok pour une information rapide et accessible.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="about.html">Découvrir le service</a>
+      <a class="btn" href="https://www.tiktok.com/@allovigitok" target="_blank" rel="noopener">Voir sur TikTok</a>
+    </div>
+  </div>
+</section>
 
-  <p>
-    <strong>Allovigitok Alertes</strong> relaie automatiquement, sous forme de courtes
-    vidéos, les alertes de rappel de produits alimentaires les plus consommés
-    (œufs et produits à base d'œufs, plats préparés et snacks, eaux, lait et
-    produits laitiers) publiées par
-    <a href="https://rappel.conso.gouv.fr/" target="_blank" rel="noopener">RappelConso</a>,
-    le service officiel de la DGCCRF (Direction générale de la concurrence,
-    de la consommation et de la répression des fraudes).
-  </p>
+<section class="section"><div class="wrap">
+  <h2>Ce que nous surveillons</h2>
+  <ul class="cats">
+    <li style="--c:var(--yolk)"><h3>Œufs et produits à base d'œufs</h3><p>Coquilles, ovoproduits, préparations.</p></li>
+    <li style="--c:var(--alert)"><h3>Plats préparés et snacks</h3><p>Plats cuisinés, sandwichs, en-cas.</p></li>
+    <li style="--c:var(--water)"><h3>Eaux</h3><p>Eaux minérales et de source.</p></li>
+    <li style="--c:var(--ink)"><h3>Lait et produits laitiers</h3><p>Lait, fromages, yaourts, desserts lactés.</p></li>
+  </ul>
+</div></section>
 
-  <p>
-    Les données sont récupérées via l'API publique
-    <a href="https://data.economie.gouv.fr/" target="_blank" rel="noopener">data.economie.gouv.fr</a>
-    et republiées sur TikTok afin d'informer rapidement les consommateurs
-    des risques concernant des produits qu'ils ont pu acheter.
-  </p>
+<section class="section"><div class="wrap">
+  <h2>Comment ça marche</h2>
+  <ol class="steps">
+    <li><h3>Un rappel est publié</h3><p>La DGCCRF le publie sur RappelConso. Nous le récupérons via l'API ouverte data.economie.gouv.fr.</p></li>
+    <li><h3>Une vidéo est générée</h3><p>Le produit, le motif et les risques sont résumés en une courte vidéo verticale.</p></li>
+    <li><h3>Elle est publiée sur TikTok</h3><p>Le rappel arrive là où vous êtes, sans chercher sur le site officiel.</p></li>
+  </ol>
+</div></section>
 
-  <p>
-    Ce service est indépendant et n'est affilié ni à la DGCCRF, ni à l'État
-    français, ni à TikTok. Il agit uniquement comme relais d'information à
-    partir de données publiques.
-  </p>
+<section class="section"><div class="wrap">
+  <div class="band"><p><strong>Service indépendant.</strong> Nous ne sommes affiliés ni à la DGCCRF, ni à l'État français, ni à TikTok. En cas de doute sur un produit, consultez la fiche officielle sur <a href="https://rappel.conso.gouv.fr/" rel="noopener">rappel.conso.gouv.fr</a>.</p></div>
+</div></section>
+</main>
 
-  <footer>
-    <p>&copy; 2026 Allovigitok Alertes — Contenu basé sur des données publiques (data.gouv.fr, Licence Ouverte).</p>
-  </footer>
+<footer class="site-footer"><div class="wrap">
+  <p>Service indépendant, non affilié à la DGCCRF, à l'État français ni à TikTok. Source de référence : <a href="https://rappel.conso.gouv.fr/" rel="noopener">rappel.conso.gouv.fr</a>.</p>
+  <p>© 2026 Allovigitok Alertes — Contenu basé sur des données publiques (data.gouv.fr, Licence Ouverte).</p>
+  <p><a href="terms.html">Conditions d'utilisation</a></p>
+</div></footer>
+<script src="script.js"></script>
 </body>
 </html>

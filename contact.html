@@ -1,47 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Allovigitok Alertes</title>
-  <style>
-    body { font-family: -apple-system, Arial, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
-    header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
-    img.icon { width: 48px; height: 48px; }
-    nav { margin: 24px 0; padding: 12px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
-    nav a { margin-right: 16px; color: #E63946; text-decoration: none; font-weight: 600; }
-    nav a:hover { text-decoration: underline; }
-    a { color: #E63946; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Allovigitok Alertes</title>
+<link rel="icon" href="app_icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&amp;family=Inter:wght@400;500&amp;family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img class="icon" src="app_icon.png" alt="Logo RappelConso Alertes">
-    <h1>Contact</h1>
-  </header>
+<header class="site-header"><div class="wrap bar">
+  <a class="brand" href="index.html"><img src="app_icon.png" alt="" width="32" height="32">Allovigitok Alertes</a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Navigation principale"><ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="about.html">À propos</a></li>
+    <li><a href="privacy.html">Confidentialité</a></li>
+    <li><a href="contact.html" aria-current="page">Contact</a></li>
+  </ul></nav>
+</div></header>
 
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="about.html">À propos</a>
-    <a href="privacy.html">Politique de confidentialité</a>
-    <a href="terms.html">Conditions d'utilisation</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<main class="wrap">
+  <div class="page-head"><h1>Contact</h1></div>
+  <div class="prose">
+    <p>Pour toute question concernant Allovigitok Alertes (signalement d'une erreur, demande relative à vos données, remarque générale), écrivez-nous :</p>
+    <div class="mail-card">
+      <strong>allovigitok@outlook.com</strong>
+      <a class="btn btn-primary" href="mailto:allovigitok@outlook.com">Envoyer un e-mail</a>
+    </div>
+    <p>Nous nous efforçons de répondre dans un délai raisonnable. Pour un rappel produit spécifique, consultez en priorité le site officiel <a href="https://rappel.conso.gouv.fr/" rel="noopener">rappel.conso.gouv.fr</a>.</p>
+  </div>
+</main>
 
-  <p>
-    Pour toute question concernant Allovigitok Alertes — signalement d'une
-    erreur, demande relative à vos données, ou remarque générale — vous
-    pouvez nous écrire à :
-  </p>
-
-  <p style="font-size: 1.2em;">
-    📧 <a href="mailto:allovigitok@outlook.com">allovigitok@outlook.com</a>
-  </p>
-
-  <p>
-    Nous nous efforçons de répondre dans un délai raisonnable. Pour un
-    rappel produit spécifique, merci de consulter en priorité le site
-    officiel <a href="https://rappel.conso.gouv.fr/" target="_blank" rel="noopener">rappel.conso.gouv.fr</a>.
-  </p>
+<footer class="site-footer"><div class="wrap">
+  <p>Service indépendant, non affilié à la DGCCRF, à l'État français ni à TikTok. Source de référence : <a href="https://rappel.conso.gouv.fr/" rel="noopener">rappel.conso.gouv.fr</a>.</p>
+  <p>© 2026 Allovigitok Alertes — Contenu basé sur des données publiques (data.gouv.fr, Licence Ouverte).</p>
+  <p><a href="terms.html">Conditions d'utilisation</a></p>
+</div></footer>
+<script src="script.js"></script>
 </body>
 </html>
