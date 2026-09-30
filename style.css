@@ -68,10 +68,18 @@ h1{font:300 clamp(2.4rem,7vw,5.6rem)/1.06 var(--font-h);letter-spacing:-.025em;m
 .site-footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.9rem}
 .site-footer p{margin:0 0 .4rem;max-width:75ch}
 
-@media (max-width:820px){
-  .steps,.cats{grid-template-columns:1fr}
+.nav-cta{margin-left:.6rem;border:1px solid var(--accent);border-radius:4px;color:var(--accent)}
+nav a.nav-cta:hover{background:var(--accent);color:var(--accent-ink)}
+.btn-accent{border-color:var(--accent);color:var(--accent)}
+.btn-accent:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+
+@media (max-width:1060px){
   .menu-btn{display:block}
   nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1rem}
   nav.open{display:block}
   nav ul{flex-direction:column}
+  .nav-cta{margin:.5rem 0 0;text-align:center}
+}
+@media (max-width:820px){
+  .steps,.cats{grid-template-columns:1fr}
 }
